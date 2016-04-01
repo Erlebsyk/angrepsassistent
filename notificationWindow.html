@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='https://dsno.innogamescdn.com/assets/no24/427980c4bd832083e2f85d5f5b9952c5/merged/game.css'>
+</head>
+<body>
+
+<h4 class='tooltip-style' id='note' style='position:relative;'>1 Minute left to command execution!</h4>
+<button id='gotoTabBtn' class='btn' onclick='focusParentWindow'>Goto tab</button>
+
+</body>
+<script>
+      //tell that parent that the child is born! so it can keep track of them and get rid of them as needed.
+      if (window.opener){
+      	window.opener.announceWindow( window );
+      }
+      //set the focus back to the parent window
+      function focusParentWindow(){
+        window.open('','parent').focus();
+      }
+</script>
+</html>
